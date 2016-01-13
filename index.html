@@ -63,7 +63,7 @@
                 <li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" data-target="#loginModal">
+                <li><a id="login">
                     <span class="glyphicon glyphicon-log-in"></span> Login</a>
                 </li>
             </ul>
@@ -202,8 +202,8 @@
             <div class="col-xs-12 col-sm-2">
                 <p style="padding:40px;"></p>
                 <a type="button" class="btn btn-warning btn-block"
-                   data-toggle="modal" data-target="#reserveModal" title="Or Call us at +852 12345678"
-                   data-placement="bottom" href="#reserveform">Reserve Table</a>
+                   title="Or Call us at +852 12345678"
+                   data-placement="bottom" id="reserveTable">Reserve Table</a>
             </div>
         </div>
     </div>
@@ -437,6 +437,14 @@
             });
         });
 
+</script>
+<script>
+    $('#login').click(function () {
+        $('#loginModal').modal('show')
+    })
+    $('#reserveTable').click(function () {
+        $('#reserveModal').modal('show')
+    })
 </script>
 
 </body>
